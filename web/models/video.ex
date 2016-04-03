@@ -24,6 +24,5 @@ defmodule Rumbl.Video do
     model
     |> cast(params, @required_fields, @optional_fields)
     |> assoc_constraint(:category)
-    |> assoc_constraint(:user)
   end
 end
