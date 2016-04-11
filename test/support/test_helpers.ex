@@ -8,13 +8,13 @@ defmodule Rumbl.TestHelpers do
       password: "supersecret"}, attrs)
 
     %Rumbl.User{}
-    |> Rumbl.User.reqistration_changeset(changes)
+    |> Rumbl.User.registration_changeset(changes)
     |> Repo.insert!()
   end
 
   def insert_video(user, attrs \\ %{}) do
     user
-    |> Ecto.build_assoc(:video, attrs)
+    |> Ecto.build_assoc(:videos, attrs)
     |> Repo.insert!()
   end
 end
